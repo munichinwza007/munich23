@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบลงทะเบียน</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>📝 แบบลงทะเบียน</h1>
+        <p>กรอกข้อมูลให้ครบถ้วน</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="samanct.html">ประวัติ</a>
+                <ul>
+                    <li><a href="samanct.html">ประวัติตัวเอง</a></li>
+                </ul>
+            </li>
+            <li><a href="table.html">ตารางสินค้า</a></li>
+            <li><a href="from.html">ลงทะเบียน</a></li>
+            <li><a href="div-span.html">ทดสอบ Div/Span</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="card">
+            <form action="#">
+
+                <!-- ข้อมูลส่วนตัว -->
+                <div class="form-section">
+                    <h2>👤 ข้อมูลส่วนตัว</h2>
+                    <div class="form-group">
+                        <label for="username">ชื่อผู้ใช้</label>
+                        <input type="text" id="username" name="username" placeholder="กรอกชื่อของคุณ">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">รหัสผ่าน</label>
+                        <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล์</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                </div>
+
+                <!-- เพศ -->
+                <div class="form-section">
+                    <h2>⚧️ เพศ</h2>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" value="ชาย" name="gender"> ชาย
+                        </label>
+                        <label>
+                            <input type="radio" value="หญิง" name="gender"> หญิง
+                        </label>
+                        <label>
+                            <input type="radio" value="อื่นๆ" name="gender"> อื่นๆ
+                        </label>
+                    </div>
+                </div>
+
+                <!-- อาหารที่ชอบ -->
+                <div class="form-section">
+                    <h2>🍽️ อาหารที่ชอบ</h2>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="favfood" value="somtum"> ส้มตำ</label>
+                        <label><input type="checkbox" name="favfood" value="panpig"> หมูกระทะ</label>
+                        <label><input type="checkbox" name="favfood" value="kie"> ไก่ทอด</label>
+                        <label><input type="checkbox" name="favfood" value="mamia"> มาม่า</label>
+                        <label><input type="checkbox" name="favfood" value="tomyum"> ต้มยำ</label>
+                    </div>
+                    <div class="form-group" style="margin-top:12px;">
+                        <label for="more">อื่นๆ (ระบุ)</label>
+                        <input type="text" id="more" name="more" placeholder="อาหารอื่นๆ ที่ชอบ">
+                    </div>
+                </div>
+
+                <!-- ประเทศ -->
+                <div class="form-section">
+                    <h2>🌏 ประเทศ</h2>
+                    <div class="form-group">
+                        <label for="province">เลือกประเทศของคุณ</label>
+                        <select name="province" id="province">
+                            <option value="">โปรดเลือกประเทศของคุณ</option>
+                            <option value="thailand">ไทย</option>
+                            <option value="myanmar">เมียนมา</option>
+                            <option value="philippines">ฟิลิปปินส์</option>
+                            <option value="vietnam">เวียดนาม</option>
+                            <option value="colombia">โคลัมเบีย</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">✅ ส่งฟอร์ม</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2568 เว็บของฉัน | วิชาคอมพิวเตอร์ ม.2</p>
+    </footer>
+
+</body>
+</html>

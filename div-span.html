@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทดสอบ Div และ Span</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>🧩 ทดสอบ Div และ Span</h1>
+        <p>ความแตกต่างระหว่าง Block และ Inline Element</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="samanct.html">ประวัติ</a>
+                <ul>
+                    <li><a href="samanct.html">ประวัติตัวเอง</a></li>
+                </ul>
+            </li>
+            <li><a href="table.html">ตารางสินค้า</a></li>
+            <li><a href="from.html">ลงทะเบียน</a></li>
+            <li><a href="div-span.html">ทดสอบ Div/Span</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="card">
+            <h2>📦 &lt;div&gt; — Block Element</h2>
+            <p style="color:#555; margin-bottom:16px;">div จะแสดงแบบ "block" คือขึ้นบรรทัดใหม่เสมอ และกินพื้นที่เต็มแนวนอน</p>
+            <div class="demo-container">
+                <div class="demo-div">Div 1</div>
+                <div class="demo-div">Div 2</div>
+                <div class="demo-div">Div 3</div>
+                <div class="demo-div">Div 4</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🏷️ &lt;span&gt; — Inline Element</h2>
+            <p style="color:#555; margin-bottom:16px;">span จะแสดงแบบ "inline" คือเรียงกันในบรรทัดเดียวกัน ไม่ขึ้นบรรทัดใหม่</p>
+            <div class="demo-span-wrapper">
+                <span class="demo-span">span1</span>
+                <span class="demo-span">span2</span>
+                <span class="demo-span">span3</span>
+                <span class="demo-span">span4</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔀 ผสม Div และ Span</h2>
+            <p style="color:#555; margin-bottom:16px;">ใช้ร่วมกันได้ในหน้าเดียวกัน</p>
+            <div class="demo-container">
+                <div class="demo-div">Div 1 มี <span style="background:#ff6f00; color:white; padding:2px 8px; border-radius:4px;">span อยู่ข้างใน</span></div>
+                <div class="demo-div">Div 2 ปกติ</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2568 เว็บของฉัน | วิชาคอมพิวเตอร์ ม.2</p>
+    </footer>
+
+</body>
+</html>

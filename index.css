@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&family=Sriracha&display=swap');
+
+/* ===== ตัวแปรสี ===== */
+:root {
+    --primary: #2e7d32;
+    --primary-light: #4caf50;
+    --accent: #ff6f00;
+    --bg: #f1f8e9;
+    --card-bg: #ffffff;
+    --text: #212121;
+    --text-light: #555555;
+    --footer-bg: #1b5e20;
+    --nav-bg: #1b5e20;
+    --header-bg: linear-gradient(135deg, #2e7d32, #66bb6a);
+    --border: #c8e6c9;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== พื้นฐาน ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Sarabun", "Sriracha", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* ===== Header ===== */
+header {
+    background: var(--header-bg);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-family: "Sriracha", cursive;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== Nav ===== */
+nav {
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+nav ul li:hover > a {
+    background-color: var(--primary-light);
+}
+
+/* dropdown */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2d6a30;
+    min-width: 160px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: var(--shadow);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    font-family: "Sriracha", cursive;
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.card p {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.card h1, .card h3, .card h4, .card h5, .card h6 {
+    color: var(--text);
+    margin: 6px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+}
+
+/* ===== List row ===== */
+.list-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.list-row ul, .list-row ol {
+    padding-left: 20px;
+    color: var(--text-light);
+}
+
+.list-row li {
+    margin: 4px 0;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #e65100;
+    transform: translateY(-2px);
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.97rem;
+}
+
+table th, table td {
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    text-align: center;
+}
+
+table thead th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9fbe7;
+}
+
+table tfoot th, table tfoot td {
+    background-color: #e8f5e9;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* ===== Form ===== */
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    color: var(--primary);
+    font-family: "Sriracha", cursive;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 6px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select {
+    padding: 9px 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Sarabun", sans-serif;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.15);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 8px 0;
+}
+
+.radio-group label, .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-family: "Sriracha", cursive;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* ===== Semantic page ===== */
+.section-box {
+    background: white;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+}
+
+.section-box h1 {
+    font-family: "Sriracha", cursive;
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.section-box p {
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+/* ===== div-span demo ===== */
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.demo-div {
+    background-color: #e8f5e9;
+    border: 2px solid var(--primary);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.demo-span-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.demo-span {
+    background-color: var(--accent);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--footer-bg);
+    color: #c8e6c9;
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #a5d6a7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
